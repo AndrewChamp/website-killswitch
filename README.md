@@ -11,7 +11,7 @@ Turn off a remote website wtih this script that 'calls home'.  Great for those c
 
 Update 'killswitch.php' w/ the URL of where your 'killswitch.xml' file will reside
 ```
-private $xml = 'http://enruchem:terminal@i36x.com/killswitch/killswitch.xml';
+private $xml = 'http://domain.com/killswitch.xml';
 ```
 
 ### Add more sites by adding them to your killswitch.xml file
