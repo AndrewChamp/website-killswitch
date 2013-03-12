@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <domains>
-  <site1.com>
+	<site1.com>
 		<status>true</status>
 		<message>Please contact me immediately.</message>
 	</site1.com>
