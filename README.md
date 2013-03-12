@@ -1,9 +1,11 @@
-# Site Killswitch
+# Website Killswitch
 
 Turn off a remote website wtih this script that 'calls home'.  Great for those clients on remote servers that are making payments.
 
 
 ## Example Usage:
+
+'killswitch.xml' will reside on your server.  'killswitch.php' resides on the remote server.
 
 ### Add more sites by adding them to your killswitch.xml file
 ```
@@ -13,8 +15,11 @@ Turn off a remote website wtih this script that 'calls home'.  Great for those c
 	</another-site.com>
 ```
 
-### Include killswitch.php to any file and add this code.
+### Add this at the top of your files
 ```
+	function __autoload($class_name){
+        include_once($class_name.'.php');
+    }
 	$check = new killswitch($_SERVER['HTTP_HOST']);
 	if($check->info->status == 'false')
 		exit($check->info->message);
