@@ -22,7 +22,7 @@ private $xml = 'http://domain.com/killswitch.xml';
 </another-site.com>
 ```
 
-### Add this at the top of your files
+### Add this at the top of your client's file
 ```
 $check = new killswitch($_SERVER['HTTP_HOST']);
 if($check->info->status == 'false')
