@@ -16,8 +16,12 @@
 		
 		
 		public function loadFile(){
-			$xml = @simplexml_load_file($this->xml);
-			$this->info = $xml->{$this->domain};			
+			try{
+				$xml = @simplexml_load_file($this->xml);
+				$this->info = $xml->{$this->domain};
+			}catch(Exception $e){
+				print $e->getMessage();
+			}
 		}
 	
 	}
