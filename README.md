@@ -16,18 +16,15 @@ private $xml = 'http://domain.com/killswitch.xml';
 
 ### Add more sites by adding them to your killswitch.xml file
 ```
-  <another-site.com>
-		<status>false</status>
-		<message>Please contact me immediately.</message>
-	</another-site.com>
+<another-site.com>
+	<status>false</status>
+	<message>Please contact me immediately.</message>
+</another-site.com>
 ```
 
 ### Add this at the top of your files
 ```
-	function __autoload($class_name){
-        include_once($class_name.'.php');
-    }
-	$check = new killswitch($_SERVER['HTTP_HOST']);
-	if($check->info->status == 'false')
-		exit($check->info->message);
+$check = new killswitch($_SERVER['HTTP_HOST']);
+if($check->info->status == 'false')
+	exit($check->info->message);
 ```
