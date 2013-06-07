@@ -1,6 +1,6 @@
 <?php
 
-  class killswitch{
+	class killswitch{
 	
 		public $domain;
 		public $info;
