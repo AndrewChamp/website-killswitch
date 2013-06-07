@@ -2,8 +2,8 @@
 
 	class killswitch{
 	
-		public $domain;
 		public $info;
+		private $domain;
 		private $xml = 'http://domain.com/killswitch.xml';
 		
 		
