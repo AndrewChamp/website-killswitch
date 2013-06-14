@@ -10,12 +10,12 @@ Turn off a remote website wtih this script that 'calls home'.  Great for those c
 ----
 
 Update 'killswitch.php' w/ the URL of where your 'killswitch.xml' file will reside
-```
+```php
 private $xml = 'http://domain.com/killswitch.xml';
 ```
 
 ### Add more sites by adding them to your killswitch.xml file
-```
+```xml
 <another-site.com>
 	<status>false</status>
 	<message>Please contact me immediately.</message>
@@ -23,7 +23,7 @@ private $xml = 'http://domain.com/killswitch.xml';
 ```
 
 ### Add this at the top of your client's file
-```
+```php
 $check = new killswitch($_SERVER['HTTP_HOST']);
 if($check->info->status == 'false')
 	exit($check->info->message);
